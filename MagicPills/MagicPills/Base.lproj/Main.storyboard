@@ -102,7 +102,15 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYp-kO-nO3">
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="choose your state"/>
+                                <connections>
+                                    <action selector="stateBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dhr-Ec-S7z"/>
+                                </connections>
                             </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDq-V2-IYM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="swt-iP-GnL"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -128,6 +136,7 @@
                             <constraint firstItem="Omd-dd-8Ok" firstAttribute="leading" secondItem="wJ6-Wd-QPd" secondAttribute="leading" id="VWv-sC-YgF"/>
                             <constraint firstItem="ufJ-DX-YCa" firstAttribute="trailing" secondItem="Omd-dd-8Ok" secondAttribute="trailing" id="WJn-eX-ltL"/>
                             <constraint firstItem="lrQ-4p-xGy" firstAttribute="leading" secondItem="ufJ-DX-YCa" secondAttribute="leading" id="XnT-mh-IqN"/>
+                            <constraint firstItem="sDq-V2-IYM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="abC-PP-bgy"/>
                             <constraint firstItem="u1a-Oq-yyG" firstAttribute="top" secondItem="q4J-im-KHu" secondAttribute="bottom" constant="25" id="bPy-fD-2h1"/>
                             <constraint firstItem="zX3-4j-0gw" firstAttribute="top" secondItem="15m-LF-b37" secondAttribute="bottom" constant="8" id="go5-QC-rbu"/>
                             <constraint firstItem="9n0-4e-yRt" firstAttribute="top" secondItem="u1a-Oq-yyG" secondAttribute="bottom" constant="8" id="hYa-SJ-N2z"/>
@@ -140,10 +149,15 @@
                             <constraint firstItem="zX3-4j-0gw" firstAttribute="leading" secondItem="15m-LF-b37" secondAttribute="leading" id="srJ-nu-MIE"/>
                             <constraint firstItem="ehv-38-TMa" firstAttribute="trailing" secondItem="zX3-4j-0gw" secondAttribute="trailing" id="tq6-AN-5QM"/>
                             <constraint firstItem="ufJ-DX-YCa" firstAttribute="top" secondItem="Omd-dd-8Ok" secondAttribute="bottom" constant="8" id="uhD-XE-Xm4"/>
+                            <constraint firstItem="sDq-V2-IYM" firstAttribute="top" secondItem="CYp-kO-nO3" secondAttribute="bottom" constant="8" id="utp-9b-xPs"/>
                             <constraint firstItem="u1a-Oq-yyG" firstAttribute="centerX" secondItem="q4J-im-KHu" secondAttribute="centerX" id="w8B-8X-I9q"/>
                             <constraint firstItem="wJ6-Wd-QPd" firstAttribute="top" secondItem="9n0-4e-yRt" secondAttribute="bottom" constant="33" id="yZV-bD-RPN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statePicker" destination="sDq-V2-IYM" id="kDm-6w-J8B"/>
+                        <outlet property="statePickerBtn" destination="CYp-kO-nO3" id="imL-hJ-yql"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
